@@ -15,25 +15,6 @@ End‑to‑end ML pipeline to classify chest CT scans using transfer learning (V
 - MLflow (optional) for experiment tracking
 - Flask + CORS for serving predictions
 
-## Project Structure
-
-├─ app.py # Flask app
-├─ main.py # Orchestrates all stages
-├─ dvc.yaml # DVC stages
-├─ params.yaml # Hyperparameters
-├─ requirements.txt # Python dependencies
-├─ templates/
-│ └─ index.html # Web UI
-├─ config/
-│ └─ config.yaml # Paths, data sources, artifacts
-└─ src/
-└─ cnnClassifier/
-├─ components/ # data_ingestion, prepare_base_model, trainer, eval
-├─ config/ # configuration manager
-├─ constants/ # CONFIG_FILE_PATH, PARAMS_FILE_PATH
-├─ entity/ # dataclasses for configs
-├─ pipeline/ # stage_01..04 + prediction pipeline
-└─ utils/ # yaml/json helpers, logging utils
 
 # Chest CT Scan Classification (TensorFlow · DVC · MLflow · Flask)
 
