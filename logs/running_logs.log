@@ -1,0 +1,102 @@
+[2025-09-18 12:18:54,686: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-18 12:18:54,694: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:18:54,694: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:18:54,694: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "g:\ds-project\src\cnnClassifier\utils\common.py", line 33, in read_yaml
+    return ConfigBox(content)
+  File "box\box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\DS-project\main.py", line 15, in <module>
+    obj.main()
+  File "g:\ds-project\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 14, in main
+    config = ConfigurationManager()
+  File "g:\ds-project\src\cnnClassifier\config\configuration.py", line 17, in __init__
+    self.params = read_yaml(params_filepath)
+  File "C:\Users\Swetha\miniforge3\envs\ds_env\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "g:\ds-project\src\cnnClassifier\utils\common.py", line 35, in read_yaml
+    raise ValueError("yaml file is empty")
+ValueError: yaml file is empty
+[2025-09-18 12:19:42,059: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-18 12:19:42,059: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:19:42,059: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:19:42,067: INFO: common: created directory at: artifacts]
+[2025-09-18 12:19:42,067: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-18 12:19:42,067: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-18 12:19:46,525: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-18 12:19:47,467: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-18 12:19:47,467: INFO: main: *******************]
+[2025-09-18 12:19:47,467: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2025-09-18 12:19:47,467: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:19:47,475: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:19:47,475: INFO: common: created directory at: artifacts]
+[2025-09-18 12:19:47,475: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-18 12:19:51,424: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-18 12:19:52,148: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-09-18 12:19:52,148: INFO: main: *******************]
+[2025-09-18 12:19:52,148: INFO: main: >>>>>> stage Training started <<<<<<]
+[2025-09-18 12:19:52,148: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:19:52,156: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:19:52,156: INFO: common: created directory at: artifacts]
+[2025-09-18 12:19:52,183: INFO: common: created directory at: artifacts\training]
+[2025-09-18 12:21:03,779: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-09-18 12:21:03,779: INFO: main: *******************]
+[2025-09-18 12:21:03,779: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-09-18 12:21:03,787: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:21:03,787: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:21:03,795: INFO: common: created directory at: artifacts]
+[2025-09-18 12:21:24,015: INFO: common: json file saved at: scores.json]
+[2025-09-18 12:21:24,016: INFO: common: json file saved at: scores.json]
+[2025-09-18 12:21:24,017: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-09-18 12:25:11,440: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-09-18 12:25:11,448: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:25:11,448: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:25:11,448: INFO: common: created directory at: artifacts]
+[2025-09-18 12:25:11,448: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-09-18 12:25:11,448: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-18 12:25:16,795: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1z0mreUtRmR-P-magILsDR3T7M6IkGXtY/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-09-18 12:25:17,473: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-09-18 12:25:44,020: INFO: stage_02_prepare_base_model: *******************]
+[2025-09-18 12:25:44,020: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-09-18 12:25:44,028: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:25:44,028: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:25:44,036: INFO: common: created directory at: artifacts]
+[2025-09-18 12:25:44,036: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-09-18 12:25:44,749: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-09-18 12:25:45,118: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-09-18 12:25:54,615: INFO: stage_03_model_trainer: *******************]
+[2025-09-18 12:25:54,615: INFO: stage_03_model_trainer: >>>>>> stage Training started <<<<<<]
+[2025-09-18 12:25:54,615: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:25:54,623: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:25:54,623: INFO: common: created directory at: artifacts]
+[2025-09-18 12:25:54,623: INFO: common: created directory at: artifacts\training]
+[2025-09-18 12:26:58,840: INFO: stage_03_model_trainer: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-09-18 12:27:12,935: INFO: stage_04_model_evaluation: *******************]
+[2025-09-18 12:27:12,936: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-09-18 12:27:12,941: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-18 12:27:12,944: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-09-18 12:27:12,945: INFO: common: created directory at: artifacts]
+[2025-09-18 12:27:37,631: INFO: common: json file saved at: scores.json]
+[2025-09-18 12:27:37,631: INFO: common: json file saved at: scores.json]
+[2025-09-18 12:27:37,631: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
